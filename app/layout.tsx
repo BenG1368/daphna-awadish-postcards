@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Instrument_Serif } from "next/font/google";
+import { Fraunces, Source_Sans_3 } from "next/font/google";
 import { Toaster } from "sonner";
 import { InquiryProvider } from "@/components/inquiry/inquiry-provider";
 import { InquiryDrawer } from "@/components/layout/inquiry-drawer";
@@ -8,15 +8,16 @@ import { SiteHeader } from "@/components/layout/site-header";
 import { site } from "@/lib/site";
 import "./globals.css";
 
-const geist = Geist({
-  subsets: ["latin"],
-  variable: "--font-geist-sans",
-});
-
-const instrumentSerif = Instrument_Serif({
+const sourceSans = Source_Sans_3({
   subsets: ["latin"],
   weight: "400",
-  variable: "--font-instrument-serif",
+  variable: "--font-source-sans",
+});
+
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  axes: ["opsz"],
+  variable: "--font-fraunces",
 });
 
 export const metadata: Metadata = {
@@ -35,7 +36,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geist.variable} ${instrumentSerif.variable} h-full antialiased`}
+      className={`${sourceSans.variable} ${fraunces.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col bg-background font-sans text-foreground">
         <InquiryProvider>
