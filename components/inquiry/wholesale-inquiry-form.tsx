@@ -55,7 +55,12 @@ export function WholesaleInquiryForm() {
         }
       }
     }
-    toast(result.message ?? "Message could not be sent.");
+    toast(
+      result.message ??
+        (result.fieldErrors
+          ? "Check the form and try again."
+          : "Message could not be sent. Please try again."),
+    );
   }
 
   return (

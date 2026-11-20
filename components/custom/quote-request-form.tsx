@@ -26,6 +26,7 @@ export function QuoteRequestForm() {
     register,
     control,
     handleSubmit,
+    setError,
     formState: { errors },
   } = useForm<CustomQuoteInput>({
     resolver: zodResolver(customQuoteSchema),
@@ -46,7 +47,19 @@ export function QuoteRequestForm() {
       setSent(true);
       return;
     }
-    toast(result.message ?? "Message could not be sent.");
+    if (result.fieldErrors) {
+      for (const [field, messages] of Object.entries(result.fieldErrors)) {
+        const message = messages?.[0];
+        if (!message || !(field in values)) continue;
+        setError(field as keyof CustomQuoteInput, { message });
+      }
+    }
+    toast(
+      result.message ??
+        (result.fieldErrors
+          ? "Check the form and try again."
+          : "Message could not be sent. Please try again."),
+    );
   }
 
   if (sent) {

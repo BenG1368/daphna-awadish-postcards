@@ -22,9 +22,17 @@ export async function submitCustomQuote(input: unknown): Promise<ActionResult> {
   ].join("\n");
 
   try {
-    await sendInquiryEmail(`Custom illustration — ${data.businessName}`, text);
+    await sendInquiryEmail(
+      `Custom illustration — ${data.businessName}`,
+      text,
+      data.email,
+    );
     return { ok: true };
-  } catch {
-    return { ok: false, message: "Message could not be sent." };
+  } catch (error) {
+    console.error(
+      "Custom quote email failed",
+      error instanceof Error ? error.message : "unknown",
+    );
+    return { ok: false, message: "Message could not be sent. Please try again." };
   }
 }

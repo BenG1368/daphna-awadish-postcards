@@ -46,9 +46,17 @@ export async function submitWholesaleInquiry(
   ].join("\n");
 
   try {
-    await sendInquiryEmail(`Wholesale inquiry — ${businessName}`, text);
+    await sendInquiryEmail(
+      `Wholesale inquiry — ${businessName}`,
+      text,
+      email,
+    );
     return { ok: true };
-  } catch {
-    return { ok: false, message: "Message could not be sent." };
+  } catch (error) {
+    console.error(
+      "Wholesale inquiry email failed",
+      error instanceof Error ? error.message : "unknown",
+    );
+    return { ok: false, message: "Message could not be sent. Please try again." };
   }
 }

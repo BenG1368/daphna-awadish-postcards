@@ -25,7 +25,7 @@ export const customQuoteSchema = z.object({
   email: z.string().trim().email("Enter a valid email."),
   budget: z.enum(site.budgetRanges, "Choose a budget range."),
   timeline: z.enum(site.timelines, "Choose a due date."),
-  brief: z.string().trim().min(20, "Add a short brief.").max(4000),
+  brief: z.string().trim(),
 });
 
 export type WholesaleContactInput = z.infer<typeof wholesaleContactSchema>;
