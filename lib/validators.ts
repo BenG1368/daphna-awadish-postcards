@@ -23,9 +23,8 @@ export const wholesaleInquirySchema = wholesaleContactSchema.extend({
 export const customQuoteSchema = z.object({
   businessName: z.string().trim().min(2, "Enter the business name.").max(120),
   email: z.string().trim().email("Enter a valid email."),
-  projectType: z.enum(site.projectTypes, "Choose a project type."),
   budget: z.enum(site.budgetRanges, "Choose a budget range."),
-  timeline: z.enum(site.timelines, "Choose a timeline."),
+  timeline: z.enum(site.timelines, "Choose a due date."),
   brief: z.string().trim().min(20, "Add a short brief.").max(4000),
 });
 

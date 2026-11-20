@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Signature } from "@/components/brand/signature";
 import { PostcardCard } from "@/components/catalog/postcard-card";
 import { Button } from "@/components/ui/button";
 import { getCategories } from "@/lib/catalog";
@@ -8,9 +9,12 @@ import type { Postcard } from "@/lib/types";
 export function HomePage({ postcards }: { postcards: Postcard[] }) {
   const featured =
     postcards.find((postcard) => postcard.blobUrl) ?? postcards[0];
-  const more = postcards
-    .filter((postcard) => postcard.id !== featured?.id)
-    .slice(0, 4);
+  const rest = postcards.filter((postcard) => postcard.id !== featured?.id);
+  const more = rest.slice(0, 4);
+  const companion = rest
+    .slice(4)
+    .find((postcard) => postcard.orientation !== "landscape");
+  if (companion) more.push(companion);
   const categories = getCategories(postcards);
 
   return (
@@ -20,8 +24,8 @@ export function HomePage({ postcards }: { postcards: Postcard[] }) {
           <p className="text-[13px] tracking-[0.18em] text-muted uppercase">
             Wholesale stationery
           </p>
-          <h1 className="mt-4 font-serif text-5xl leading-[1.05] md:text-6xl">
-            {site.name}
+          <h1 className="mt-4">
+            <Signature className="w-[min(100%,18rem)] md:w-[23rem]" />
           </h1>
           <p className="mt-5 max-w-md text-lg leading-relaxed text-muted">
             {site.description}
@@ -51,12 +55,6 @@ export function HomePage({ postcards }: { postcards: Postcard[] }) {
                 className="mx-auto h-auto max-h-[62svh] w-auto max-w-full md:max-h-[min(78svh,860px)]"
               />
             </Link>
-            <figcaption className="mt-4 flex items-baseline justify-between gap-4">
-              <span className="font-serif text-lg leading-snug">{featured.title}</span>
-              <span className="shrink-0 text-[13px] tracking-[0.16em] text-muted uppercase">
-                {featured.category}
-              </span>
-            </figcaption>
           </figure>
         ) : null}
       </section>

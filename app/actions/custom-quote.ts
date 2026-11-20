@@ -14,9 +14,8 @@ export async function submitCustomQuote(input: unknown): Promise<ActionResult> {
   const text = [
     `Business: ${data.businessName}`,
     `Email: ${data.email}`,
-    `Project type: ${data.projectType}`,
     `Budget: ${data.budget}`,
-    `Timeline: ${data.timeline}`,
+    `Due date: ${data.timeline}`,
     "",
     "Brief:",
     data.brief,

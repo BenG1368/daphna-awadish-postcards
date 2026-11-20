@@ -3,8 +3,8 @@
 import { useEffect, useState, type ReactNode } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { Signature } from "@/components/brand/signature";
 import { useInquiry } from "@/components/inquiry/inquiry-provider";
-import { site } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 const links = [
@@ -28,9 +28,9 @@ export function SiteHeader() {
       <div className="mx-auto flex h-20 max-w-6xl items-center justify-between gap-3 px-5 md:h-24 md:gap-6 md:px-8">
         <Link
           href="/"
-          className="font-serif text-[1.375rem] leading-none tracking-tight focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring sm:text-[1.75rem] md:text-[2rem]"
+          className="shrink-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
         >
-          {site.name}
+          <Signature className="h-14 md:h-16" />
         </Link>
         <div className="flex items-center gap-4 md:gap-8">
           <nav className="hidden items-center gap-8 md:flex" aria-label="Primary">

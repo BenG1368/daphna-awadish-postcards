@@ -32,7 +32,6 @@ export function QuoteRequestForm() {
     defaultValues: {
       businessName: "",
       email: "",
-      projectType: undefined,
       budget: undefined,
       timeline: undefined,
       brief: "",
@@ -70,13 +69,6 @@ export function QuoteRequestForm() {
         <Input {...register("email")} type="email" autoComplete="email" />
       </Field>
       <Choice
-        label="Project type"
-        error={errors.projectType?.message}
-        control={control}
-        name="projectType"
-        options={site.projectTypes}
-      />
-      <Choice
         label="Estimated budget"
         error={errors.budget?.message}
         control={control}
@@ -84,7 +76,7 @@ export function QuoteRequestForm() {
         options={site.budgetRanges}
       />
       <Choice
-        label="Timeline"
+        label="Due date"
         error={errors.timeline?.message}
         control={control}
         name="timeline"
@@ -126,7 +118,7 @@ function Choice({
   control,
 }: {
   label: string;
-  name: "projectType" | "budget" | "timeline";
+  name: "budget" | "timeline";
   options: readonly string[];
   error?: string;
   control: ReturnType<typeof useForm<CustomQuoteInput>>["control"];
