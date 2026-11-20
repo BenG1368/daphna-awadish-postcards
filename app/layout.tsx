@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Fraunces, Source_Sans_3 } from "next/font/google";
+import { Quicksand } from "next/font/google";
 import { Toaster } from "sonner";
 import { InquiryProvider } from "@/components/inquiry/inquiry-provider";
 import { InquiryDrawer } from "@/components/layout/inquiry-drawer";
@@ -8,16 +8,9 @@ import { SiteHeader } from "@/components/layout/site-header";
 import { site } from "@/lib/site";
 import "./globals.css";
 
-const sourceSans = Source_Sans_3({
+const quicksand = Quicksand({
   subsets: ["latin"],
-  weight: "400",
-  variable: "--font-source-sans",
-});
-
-const fraunces = Fraunces({
-  subsets: ["latin"],
-  axes: ["opsz"],
-  variable: "--font-fraunces",
+  variable: "--font-quicksand",
 });
 
 export const metadata: Metadata = {
@@ -36,7 +29,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${sourceSans.variable} ${fraunces.variable} h-full antialiased`}
+      className={`${quicksand.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col bg-background font-sans text-foreground">
         <InquiryProvider>

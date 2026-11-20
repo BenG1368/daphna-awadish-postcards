@@ -20,8 +20,8 @@
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
   --color-ring: var(--ring);
-  --font-sans: var(--font-source-sans), ui-sans-serif, system-ui, sans-serif;
-  --font-serif: var(--font-fraunces), ui-serif, Georgia, serif;
+  --font-sans: var(--font-quicksand), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-quicksand), ui-sans-serif, system-ui, sans-serif;
 }
 
 body {
@@ -30,8 +30,7 @@ body {
 }
 
 .font-serif {
-  font-weight: 400;
-  font-optical-sizing: auto;
+  font-weight: 500;
 }
 
 @keyframes sheet-in {
