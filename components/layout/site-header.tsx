@@ -30,7 +30,7 @@ export function SiteHeader() {
           href="/"
           className="shrink-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
         >
-          <Signature className="h-14 md:h-16" />
+          <Signature className="h-11 md:h-12" />
         </Link>
         <div className="flex items-center gap-4 md:gap-8">
           <nav className="hidden items-center gap-8 md:flex" aria-label="Primary">
