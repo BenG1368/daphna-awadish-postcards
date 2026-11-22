@@ -43,12 +43,22 @@ async function main() {
   }
 
   const postcards = JSON.parse(readFileSync(catalogPath, "utf8")) as Postcard[];
+  const requested = process.argv.slice(2).filter((arg) => !arg.startsWith("-"));
   const files = readdirSync(imageDir).filter((file) =>
-    file.toLowerCase().endsWith(".jfif"),
+    /\.(jfif|png|jpe?g)$/i.test(file),
   );
 
   let uploaded = 0;
   for (const postcard of postcards) {
+    if (
+      requested.length > 0 &&
+      !requested.some(
+        (name) => name.toLowerCase() === postcard.imageFilename.toLowerCase(),
+      )
+    ) {
+      continue;
+    }
+
     const source = findImage(postcard.imageFilename, files);
     if (!source) {
       console.warn(`Missing image for ${postcard.imageFilename}`);
@@ -66,7 +76,7 @@ async function main() {
       })
       .webp({ quality: 78 })
       .toBuffer();
-    const pathname = postcard.imageFilename.replace(/\.jfif$/i, ".webp");
+    const pathname = postcard.imageFilename.replace(/\.(jfif|png|jpe?g)$/i, ".webp");
     const blob = await put(pathname, body, {
       access: "public",
       contentType: "image/webp",
