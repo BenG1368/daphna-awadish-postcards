@@ -21,7 +21,7 @@ export default function CustomPage() {
         <p
           className={`${handwritten.className} mt-5 max-w-md text-[1.85rem] leading-snug text-foreground`}
         >
-          Tell me about the business, when you need the drawing, and what you
+          Tell me about the business, when you need the illustration, and what you
           hope it will do. I’ll write back with a quote.
         </p>
       </div>

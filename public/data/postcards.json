@@ -43,7 +43,7 @@
   },
   {
     "id": "postcard-004",
-    "title": "Foxes on Ice",
+    "title": "Snow foxes",
     "category": "Holidays",
     "imageFilename": "ChristmessFox.JFIF",
     "orientation": "landscape",
@@ -156,7 +156,7 @@
     "id": "postcard-012",
     "title": "The Greenhouse",
     "category": "Urban",
-    "imageFilename": "Botanic.JFIF",
+    "imageFilename": "Botanic.png",
     "orientation": "landscape",
     "blobUrl": "https://ydpkgarlomcqdi9o.public.blob.vercel-storage.com/Botanic.webp",
     "tags": [
@@ -181,7 +181,7 @@
   },
   {
     "id": "postcard-014",
-    "title": "House and Cottage",
+    "title": "Red and Gray houses",
     "category": "Urban",
     "imageFilename": "HouseAndCottage.JFIF",
     "blobUrl": "https://ydpkgarlomcqdi9o.public.blob.vercel-storage.com/HouseAndCottage.webp",
@@ -194,7 +194,7 @@
   },
   {
     "id": "postcard-015",
-    "title": "Sunflower Houses",
+    "title": "House with Sunflowers",
     "category": "Urban",
     "imageFilename": "SunflowerHouses.JFIF",
     "orientation": "landscape",
@@ -208,7 +208,7 @@
   },
   {
     "id": "postcard-016",
-    "title": "The Little Car",
+    "title": "Two Houses",
     "category": "Urban",
     "imageFilename": "TheLittleCar.JFIF",
     "orientation": "landscape",
@@ -222,7 +222,7 @@
   },
   {
     "id": "postcard-017",
-    "title": "The Turret",
+    "title": "The tower house",
     "category": "Urban",
     "imageFilename": "TheTurret.JFIF",
     "blobUrl": "https://ydpkgarlomcqdi9o.public.blob.vercel-storage.com/TheTurret.webp",
@@ -235,7 +235,7 @@
   },
   {
     "id": "postcard-018",
-    "title": "The Brick House",
+    "title": "The house with the turquoise door",
     "category": "Urban",
     "imageFilename": "TheBrickHouse.JFIF",
     "blobUrl": "https://ydpkgarlomcqdi9o.public.blob.vercel-storage.com/TheBrickHouse.webp",
@@ -252,19 +252,6 @@
     "category": "Urban",
     "imageFilename": "TheBalcony.JFIF",
     "blobUrl": "https://ydpkgarlomcqdi9o.public.blob.vercel-storage.com/TheBalcony.webp",
-    "tags": [
-      "Urban"
-    ],
-    "description": "",
-    "suggestedRetail": null,
-    "moq": null
-  },
-  {
-    "id": "postcard-020",
-    "title": "The Round Window",
-    "category": "Urban",
-    "imageFilename": "TheRoundWindow.JFIF",
-    "blobUrl": "https://ydpkgarlomcqdi9o.public.blob.vercel-storage.com/TheRoundWindow.webp",
     "tags": [
       "Urban"
     ],
@@ -328,7 +315,7 @@
   },
   {
     "id": "postcard-025",
-    "title": "Penguins at the Pool",
+    "title": "Swimming with wings 1",
     "category": "Animals",
     "imageFilename": "PenguinsAtThePool.JFIF",
     "orientation": "landscape",
@@ -342,7 +329,7 @@
   },
   {
     "id": "postcard-026",
-    "title": "Penguins in Coats",
+    "title": "Swimming with wings 2",
     "category": "Animals",
     "imageFilename": "PenguinsInCoats.JFIF",
     "orientation": "landscape",
@@ -356,7 +343,7 @@
   },
   {
     "id": "postcard-027",
-    "title": "Swimming Penguins",
+    "title": "Swimming with wings 3",
     "category": "Animals",
     "imageFilename": "SwimmingPenguins.JFIF",
     "orientation": "landscape",
@@ -384,7 +371,7 @@
   },
   {
     "id": "postcard-029",
-    "title": "The Cargo Bike",
+    "title": "Bakfiets",
     "category": "Characters",
     "imageFilename": "TheCargoBike.png",
     "orientation": "landscape",
@@ -398,7 +385,7 @@
   },
   {
     "id": "postcard-030",
-    "title": "The Fountain",
+    "title": "Het kinderbad",
     "category": "Characters",
     "imageFilename": "TheFountain.png",
     "orientation": "landscape",
@@ -425,7 +412,7 @@
   },
   {
     "id": "postcard-032",
-    "title": "The Blue Sofa",
+    "title": "Sofa time",
     "category": "Characters",
     "imageFilename": "TheBlueSofa.png",
     "orientation": "landscape",
@@ -453,7 +440,7 @@
   },
   {
     "id": "postcard-034",
-    "title": "Resting Tiger",
+    "title": "Dreaming tiger",
     "category": "Animals",
     "imageFilename": "RestingTiger.png",
     "orientation": "landscape",
@@ -467,7 +454,7 @@
   },
   {
     "id": "postcard-035",
-    "title": "Tiger on the Stairs",
+    "title": "Tiger in pink background",
     "category": "Animals",
     "imageFilename": "TigerOnTheStairs.png",
     "blobUrl": "https://ydpkgarlomcqdi9o.public.blob.vercel-storage.com/TigerOnTheStairs.webp",
@@ -493,7 +480,7 @@
   },
   {
     "id": "postcard-038",
-    "title": "The Red Window",
+    "title": "Inside out",
     "category": "Urban",
     "imageFilename": "TheRedWindow.png",
     "blobUrl": "https://ydpkgarlomcqdi9o.public.blob.vercel-storage.com/TheRedWindow.webp",

@@ -90,7 +90,7 @@ export function HomePage({ postcards }: { postcards: Postcard[] }) {
         <div className="mx-auto flex max-w-6xl flex-col gap-6 px-5 py-16 md:flex-row md:items-end md:justify-between md:px-8 md:py-24">
           <div>
             <h2 className="font-serif text-3xl md:text-4xl">
-              A drawing made for the business
+              An illustration made for the business
             </h2>
             <p className="mt-3 max-w-md text-muted">
               Branding, packaging, a custom postcard, or an editorial series.

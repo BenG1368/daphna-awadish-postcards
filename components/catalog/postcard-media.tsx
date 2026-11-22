@@ -26,7 +26,7 @@ export function PostcardMedia({
 
   if (layout === "natural") {
     return (
-      // The file's own shape sets the card height, so landscape drawings stay large.
+      // The file's own shape sets the card height, so landscape illustrations stay large.
       // eslint-disable-next-line @next/next/no-img-element
       <img src={src} alt={alt} className={cn("block h-auto w-full", className)} />
     );
