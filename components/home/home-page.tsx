@@ -15,6 +15,15 @@ export function HomePage({ postcards }: { postcards: Postcard[] }) {
     .slice(4)
     .find((postcard) => postcard.orientation !== "landscape");
   if (companion) more.push(companion);
+  const selected = more.flatMap((postcard) => {
+    if (postcard.title !== "Off to the Beach") return [postcard];
+    const replacement = postcards.find((item) => item.title === "Change of season");
+    return replacement ? [replacement] : [postcard];
+  });
+  const greenhouse = postcards.find((postcard) => postcard.title === "The Greenhouse");
+  if (greenhouse && !selected.some((postcard) => postcard.id === greenhouse.id)) {
+    selected.push(greenhouse);
+  }
   const categories = getCategories(postcards);
 
   return (
@@ -75,11 +84,11 @@ export function HomePage({ postcards }: { postcards: Postcard[] }) {
         </section>
       ) : null}
 
-      {more.length > 0 ? (
+      {selected.length > 0 ? (
         <section className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24">
           <h2 className="font-serif text-3xl">Selected works</h2>
           <div className="mt-8 grid grid-flow-dense grid-cols-2 gap-4 md:grid-cols-4 md:gap-6">
-            {more.map((postcard) => (
+            {selected.map((postcard) => (
               <PostcardCard key={postcard.id} postcard={postcard} />
             ))}
           </div>
