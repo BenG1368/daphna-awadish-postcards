@@ -18,12 +18,8 @@ export const site = {
 
 export const about = {
   role: "Illustrator",
-  paragraphs: [
-    "Placeholder: Daphna Awadish makes illustrated postcards for shops, museums, and brands. Replace this with her short biography.",
-    "Placeholder: she works from observation, in small wholesale editions and in commissions for packaging, identity, and editorial stories.",
-    "Placeholder: the wholesale program is for boutiques and stockists who want a coherent collection they can reorder.",
-  ],
-  collaborations: ["Placeholder collaboration"],
+  paragraphs: [site.description],
+  collaborations: [] as string[],
 };
 
 export function formatMoney(value: number) {
