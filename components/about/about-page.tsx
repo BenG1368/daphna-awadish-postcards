@@ -4,7 +4,7 @@ import { about, site } from "@/lib/site";
 export function AboutPage() {
   return (
     <article className="mx-auto max-w-2xl px-5 py-16 md:px-8 md:py-24">
-      <h1 className="font-serif text-4xl md:text-5xl">{site.name}</h1>
+      <h1 className="font-serif text-4xl md:text-5xl">{about.name}</h1>
       <p className="mt-3 text-sm tracking-[0.16em] text-muted uppercase">
         {about.role}
       </p>

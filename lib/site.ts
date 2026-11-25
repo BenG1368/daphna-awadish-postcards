@@ -17,6 +17,7 @@ export const site = {
 } as const;
 
 export const about = {
+  name: "Daphna Awadish Golan",
   role: "Animation filmmaker and illustrator",
   paragraphs: [
     "Daphna Awadish Golan is an award-winning animation filmmaker and illustrator based in Amsterdam. Using a rich blend of tactile mixed media, her animated documentaries craft personal stories that center on memory, identity, and belonging.",
