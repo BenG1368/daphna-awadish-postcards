@@ -35,7 +35,11 @@ export function SiteHeader() {
         <div className="flex items-center gap-4 md:gap-8">
           <nav className="hidden items-center gap-8 md:flex" aria-label="Primary">
             {links.map((link) => (
-              <HeaderLink key={link.href} href={link.href} current={pathname === link.href}>
+              <HeaderLink
+                key={link.href}
+                href={link.href}
+                current={pathname === link.href || pathname.startsWith(`${link.href}/`)}
+              >
                 {link.label}
               </HeaderLink>
             ))}
@@ -73,7 +77,7 @@ export function SiteHeader() {
             <HeaderLink
               key={link.href}
               href={link.href}
-              current={pathname === link.href}
+              current={pathname === link.href || pathname.startsWith(`${link.href}/`)}
               className="py-3 text-base"
             >
               {link.label}

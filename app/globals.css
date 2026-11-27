@@ -24,6 +24,12 @@
   --font-serif: var(--font-quicksand), ui-sans-serif, system-ui, sans-serif;
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
